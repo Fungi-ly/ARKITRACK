@@ -7,19 +7,20 @@
   <title>Arkitrack | Diseño de Pumptracks Profesionales en Chile</title>
   <meta name="description" content="Arkitrack ofrece el diseño completo de pumptracks: anteproyecto, planimetría técnica, cubicaciones y renders. Servicio especializado en Chile, listo para licitar o construir.">
   <meta name="keywords" content="pumptrack, diseño pumptrack, anteproyecto pumptrack, planimetría pumptrack, cubicaciones pumptrack, proyectos deportivos Chile">
+  <meta name="author" content="Arkitrack">
+  <meta name="robots" content="index, follow">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://arkitrack.com/">
 
-   <!-- Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arkitrack.com/">
   <meta property="og:title" content="Arkitrack | Diseño de Pumptracks Profesionales en Chile">
   <meta property="og:description" content="Convierte tu idea en un pumptrack profesional. Planimetría lista para licitar, financiar o construir.">
   <meta property="og:image" content="https://arkitrack.com/wp-content/uploads/2023/09/Logo-ARKITRACK-2022-horizontal.png">
 
-
-   <!-- Twitter Card -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Arkitrack | Diseño de Pumptracks Profesionales en Chile">
   <meta name="twitter:description" content="Convierte tu idea en un pumptrack profesional. Planimetría lista para licitar, financiar o construir.">
@@ -108,9 +109,7 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
 
 /* Responsive fixes */
 @media (max-width:768px){
-  .hero {
-    padding-top:25px; /* espacio extra para que el logo no choque con el texto */
-  }
+  .hero {padding-top:25px}
   .hero .content{grid-template-columns:1fr;gap:30px;padding:40px 0;text-align:center}
   .hero h1{font-size:2rem;line-height:1.2}
   .lead{font-size:1rem}
@@ -121,30 +120,17 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
 
 /* Centrar 4º item en 3 cols (Features y Steps) */
 @media (min-width: 992px){
-  .features-grid{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .features-grid > *:nth-child(4){
-    grid-column: 2;
-  }
-  .steps{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .steps > *:nth-child(4){
-    grid-column: 2;
-  }
+  .features-grid{grid-template-columns: repeat(3, 1fr)}
+  .features-grid > *:nth-child(4){grid-column: 2}
+  .steps{grid-template-columns: repeat(3, 1fr)}
+  .steps > *:nth-child(4){grid-column: 2}
 }
 
 /* Reducir espacio entre Features e Info Extra en móviles */
 @media (max-width:768px){
-  .features {
-    padding:40px 0;   /* antes 80px */
-  }
-  .ie {
-    padding:30px 0;   /* antes 48px */
-  }
+  .features {padding:40px 0}
+  .ie {padding:30px 0}
 }
-
   </style>
 </head>
 <body>
@@ -158,9 +144,13 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
     <div class="container">
       <div class="content">
         <div>
-          <span class="badge">Servicio profesional de diseño</span>
+          <a href="#planes" class="badge" style="cursor:pointer; text-decoration:none;">
+            Servicio profesional de diseño
+          </a>
           <h1>Presenta tu proyecto de Pumptrack de una manera clara y visual</h1>
-          <div class="highlight-box">Proyectos de Pumptrack</div>
+          <a href="#features" class="highlight-box" style="cursor:pointer; text-decoration:none;">
+            Proyectos de Pumptrack
+          </a>
           <p class="lead">Planimetría profesional. Listo para que licites, levantes recursos y construyas!</p>
           <p class="small-note">Diseño 100% — No incluye construcción</p>
           <p class="note">Respuesta en 24 h · 7–10 días hábiles para entrega estándar</p>
@@ -175,7 +165,7 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
   </section>
 
   <!-- Features -->
-  <section class="features">
+  <section class="features" id="features">
     <div class="container">
       <div class="features-grid">
         <div class="feature"><div class="feature-media"><img src="./equipo.jpeg" alt="Equipo experto"></div><h3>Equipo Experto</h3><p>Arquitectos, ingenieros y usuarios especializados</p></div>
@@ -259,7 +249,7 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
     </div>
   </section>
 
-   <!-- Final + Formulario -->
+  <!-- Final + Formulario -->
   <section class="final" id="contacto">
     <div class="container">
       <h2>Solicita tu Diseño</h2>
@@ -281,13 +271,12 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
         <div id="estadoForm" style="margin-top:10px;font-weight:600;color:#2C3E50"></div>
       </form>
 
-      <!-- Logo integrado en la sección -->
+      <!-- Logo integrado -->
       <div style="text-align:center; padding:30px 0 0;">
         <img src="logo arki negro.png" alt="Logo Arkitrack" style="max-width:200px; height:auto;">
       </div>
     </div>
   </section>
-
 
   <!-- WhatsApp -->
   <a class="wa" aria-label="WhatsApp" target="_blank" rel="noopener"
@@ -323,18 +312,17 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
       });
     }
 
-
     // Scroll suave para anclas
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href').substring(1);
-    const targetEl = document.getElementById(targetId);
-    if(targetEl){
-      e.preventDefault();
-      targetEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const targetEl = document.getElementById(targetId);
+        if(targetEl){
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
