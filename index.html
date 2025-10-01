@@ -107,30 +107,40 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
 
 /* Responsive fixes */
 @media (max-width:768px){
+  .hero {
+    padding-top:25px; /* espacio extra para que el logo no choque con el texto */
+  }
   .hero .content{grid-template-columns:1fr;gap:30px;padding:40px 0;text-align:center}
   .hero h1{font-size:2rem;line-height:1.2}
   .lead{font-size:1rem}
   .mock{width:100%;max-width:280px;margin:0 auto}
   .volume-indicator{font-size:.8rem;padding:6px 12px;bottom:-20px}
-  .logo-hero img{max-width:110px}
+  .logo-hero img{max-width:150px}
 }
 
 /* Centrar 4º item en 3 cols (Features y Steps) */
 @media (min-width: 992px){
-  /* Features */
   .features-grid{
     grid-template-columns: repeat(3, 1fr);
   }
   .features-grid > *:nth-child(4){
     grid-column: 2;
   }
-
-  /* Steps */
   .steps{
     grid-template-columns: repeat(3, 1fr);
   }
   .steps > *:nth-child(4){
     grid-column: 2;
+  }
+}
+
+/* Reducir espacio entre Features e Info Extra en móviles */
+@media (max-width:768px){
+  .features {
+    padding:40px 0;   /* antes 80px */
+  }
+  .ie {
+    padding:30px 0;   /* antes 48px */
   }
 }
 
@@ -150,7 +160,7 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
           <span class="badge">Servicio profesional de diseño</span>
           <h1>Presenta tu proyecto de Pumptrack de una manera clara y visual</h1>
           <div class="highlight-box">Proyecto de Pumptrack</div>
-          <p class="lead">Planimetría profesional. Listo para que licites o levantes recursos y construyas!</p>
+          <p class="lead">Planimetría profesional. Listo para que licites, levantes recursos y construyas!</p>
           <p class="small-note">Diseño 100% — No incluye construcción</p>
           <p class="note">Respuesta en 24 h · 7–10 días hábiles para entrega estándar</p>
           <a href="#contacto" class="cta">Cotizar diseño ahora</a>
@@ -248,7 +258,7 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
     </div>
   </section>
 
-  <!-- Final + Formulario -->
+   <!-- Final + Formulario -->
   <section class="final" id="contacto">
     <div class="container">
       <h2>Solicita tu Diseño</h2>
@@ -269,13 +279,14 @@ h1{font-size:3.1rem;line-height:1.08;font-weight:900;margin:6px 0 14px}
         <button type="submit" class="cta" style="width:100%;margin-top:10px">Enviar por WhatsApp</button>
         <div id="estadoForm" style="margin-top:10px;font-weight:600;color:#2C3E50"></div>
       </form>
+
+      <!-- Logo integrado en la sección -->
+      <div style="text-align:center; padding:30px 0 0;">
+        <img src="logo arki negro.png" alt="Logo Arkitrack" style="max-width:200px; height:auto;">
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <img src="logo arki negro.png" alt="Logo Arkitrack">
-  </footer>
 
   <!-- WhatsApp -->
   <a class="wa" aria-label="WhatsApp" target="_blank" rel="noopener"
