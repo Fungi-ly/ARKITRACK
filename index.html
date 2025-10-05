@@ -159,6 +159,30 @@ body { padding-top: 70px; }
   .cta-btn { font-size: .8rem; padding: 5px 12px; }
 }
 
+/* === Ajuste posición del hero principal === */
+body {
+  padding-top: 60px !important; /* antes estaba 70px */
+}
+
+.hero {
+  min-height: 86vh;
+  padding-top: 20px !important; /* antes no tenía o era más alto */
+}
+
+.hero .content {
+  padding-top: 0 !important;
+  margin-top: -10px !important; /* empuja el H1 hacia arriba */
+}
+/* === Ajuste del bloque "Solicita tu Diseño" === */
+.final {
+  padding-top: 40px !important;   /* antes 70px */
+  margin-top: -15px !important;   /* corrige el salto visual desde la sección anterior */
+}
+
+.final h2 {
+  margin-top: 0 !important;
+}
+
   </style>
 </head>
 <body>
@@ -264,8 +288,8 @@ body { padding-top: 70px; }
       <h2>Planes de diseño</h2>
       <div class="pgrid">
         <div class="pcard">
-          <span class="tag">Vende tu proyecto</span>
-          <h3>Plan Básico — Anteproyecto</h3>
+      
+          <h3>Plan Básico &#8209 Anteproyecto</h3>
           <div class="price">$1.5M</div>
           <ul class="plist">
             <li>Anteproyecto emplazado en tu terreno (lámina vendedora)</li>
@@ -278,9 +302,9 @@ body { padding-top: 70px; }
         </div>
 
         <div class="pcard">
-          <span class="ribbon">Más elegido</span>
-          <span class="tag">Licitación directa</span>
-          <h3>Plan Completo — Proyecto de Construcción</h3>
+          <!-- <span class="ribbon">Más elegido</span>-->
+
+          <h3>Plan Completo &#8209 Proyecto de Construcción</h3>
           <div class="price">$3.5M</div>
           <ul class="plist">
             <li>Planimetría de construcción (detalles, pendientes, radios)</li>
@@ -293,8 +317,7 @@ body { padding-top: 70px; }
         </div>
 
         <div class="pcard">
-          <span class="tag">Impacto visual</span>
-          <h3>Plan Premium - Seguimiento de obra y modelo 3D</h3>
+          <h3>Plan Premium &#8209 Seguimiento de obra y modelo 3D</h3>
           <div class="price">$7M</div>
           <ul class="plist">
             <li>Todo lo del Plan Completo</li>            
@@ -314,11 +337,7 @@ body { padding-top: 70px; }
   <!-- Features -->
   <section class="features" id="features">
     <div class="container">
-      <div style="display:flex; justify-content:center;">
-        <a href="#features" class="highlight-box" style="cursor:pointer; text-decoration:none;">
-          Proyectos de Pumptrack
-        </a>
-      </div>
+      
 
       <div class="features-grid">
         <div class="feature">
